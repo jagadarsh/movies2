@@ -63,7 +63,7 @@
   </div>
 
   <script>
-    const correctPassword = "minceraftsmp";
+    const correctPassword = "${{ secrets.SITE_PASSWORD }}";
 
     function checkPassword() {
       const input = document.getElementById("password").value;
@@ -74,7 +74,6 @@
       }
     }
 
-    // Allow Enter key
     document.getElementById("password").addEventListener("keypress", function(e) {
       if (e.key === "Enter") {
         checkPassword();
